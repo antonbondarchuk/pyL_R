@@ -1,3 +1,6 @@
+"""General Info about pyL_R extension and links to contact maintainer.
+"""
+
 import sys
 
 from pyrevit import forms
@@ -31,6 +34,5 @@ class AboutpyL_R(forms.WPFWindow):
 
     def handleclick(self, sender, args):
         self.Close()
-
 
 AboutpyL_R('aboutpyL_R.xaml').show_dialog()

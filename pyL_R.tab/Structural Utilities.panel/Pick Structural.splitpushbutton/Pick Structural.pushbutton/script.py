@@ -1,5 +1,4 @@
-"""Activates selection tool that picks specific Structural type of element.
-
+"""Activates selection tool that picks specific Structural types of element.\n
 For other categories refer main pyRevit Tab.
 """
 
@@ -51,6 +50,7 @@ options = sorted(['Brace in Plan View Symbols',
                   'Wall Tags',
                   'Floors',
                   'Floor Tags',
+                  'Detail Items',
                   'Lines',
                   'Text Notes'])
 

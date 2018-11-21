@@ -8,9 +8,8 @@ sys.path.insert(0, 'C:\\Python27\Lib\site-packages')
 from PyPDF2 import PdfFileMerger
 
 __context__='zerodoc'
-__doc__='Combines pdf files using PyPDF2. The tool will ask for a folder '\
-        'where pdf files located.\n\n'\
-        
+__doc__='Combines pdf files using PyPDF2.\n'\
+        'The tool will ask for a folder where pdf files located.'
 
 merger = PdfFileMerger(strict=False)
 
@@ -31,7 +30,7 @@ for f in filenames:
             merger.append(op)
             filecount += 1
         except:
-            pass
+            forms.alert('Oops.. Something went wrong.\nCombine pdf files manually using other resources.')
 
 outPDF = destination + '_Combined.pdf'
 output = open(outPDF, 'wb')

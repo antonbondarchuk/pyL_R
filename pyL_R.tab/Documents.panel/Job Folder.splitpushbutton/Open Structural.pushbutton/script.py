@@ -1,10 +1,10 @@
 """Opens Structural folder of the current project where actual Revit file
-(or Central model in case of a Workshared project) located.
+(or Central model if Workshared) located.
 """
 
 from System.Diagnostics import Process
 from Autodesk.Revit.DB import ModelPathUtils
-from pyrevit import revit
+from pyrevit import revit, forms
 
 # Set folder separator & destination:
 sep = 'Drawings'
@@ -15,10 +15,8 @@ def checkSep(sep, fname):
     if sep in fname:
         return True
     else:
-        print ("""
-                File either not saved or is not located at relevant job folder.
-                Check file location manually.
-                """)
+        forms.alert('Oops..Something went wrong.\nFile either not saved or is not located at relevant job folder.\nCheck file location manually.')
+        
 # Checks if the file is workshared. Will follow Central model location.
 # Otherwise opens single file folder location
 if revit.doc.IsWorkshared:

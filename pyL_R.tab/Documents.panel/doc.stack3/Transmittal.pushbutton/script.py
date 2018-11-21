@@ -1,3 +1,8 @@
+"""Opens Excel transmittal file located in the current project job folder.\n
+Populates general info & drawings numbers-names pairs.\n
+Manually manage revisions & dates till implemented.
+"""
+
 import clr
 clr.AddReference("Microsoft.Office.Interop.Excel")
 from Microsoft.Office.Interop import Excel
