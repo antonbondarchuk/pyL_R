@@ -1,6 +1,4 @@
-"""Activates selection tool that picks specific structural usage of
-Structural Framing elements (e.g. Girders, Joists, Bracing, etc.)
-
+"""Activates selection tool that picks specific Structural Framing elements that belong to selected structural usage\n(e.g. Girders, Joists, Bracing, etc.)
 """
 
 from pyrevit.framework import List

@@ -1,6 +1,6 @@
-"""Creates folder structure in the current 'Structural' job folder. 
-Copies 'Transmittal.xlsx' from K:\\ drive into working job folder.
-Run this tool after job initiated and Revit file saved to relevant destination.
+"""Creates folder structure in the current 'Structural' job folder.\n 
+Copies 'Transmittal.xlsx' from K:\\ drive into working job folder.\n
+Run this tool after job initiated and\nRevit file saved to relevant destination.
 """
 
 import os
@@ -41,8 +41,6 @@ destSubfolder = ['\\1_CURRENT PDF',
             '\\2_CURRENT CAD',
             '\\3_CURRENT RVT']
 
-
-
 # Checks if the file is workshared. Will follow Central model location.
 # Otherwise will create job folder from PathName property
 if revit.doc.IsWorkshared:
@@ -58,7 +56,7 @@ if revit.doc.IsWorkshared:
             shutil.copyfile(trans, strFolder + '\\' + revit.doc.Title[:6] + '-TRANS-STR.xls')
             forms.alert('Job folder structure created successfully!')
         except:
-            forms.alert('Something went wrong. Create folder structure manually.')
+            forms.alert('Oops..Something went wrong.\nCreate folder structure manually.')
 else:
     fname = revit.doc.PathName
     if checkSep(sep, fname):
@@ -69,4 +67,4 @@ else:
             shutil.copyfile(trans, strFolder + '\\' + revit.doc.Title[:6] + '-TRANS-STR.xls')
             forms.alert('Job folder structure created successfully!')
         except:
-            forms.alert('Something went wrong. Create folder structure manually.')
+            forms.alert('Oops..Something went wrong.\nCreate folder structure manually.')

@@ -85,7 +85,7 @@
                     <Button Content="GitHub" FontSize="14"
                             Click="opengithubrepopage"/>
                     <Button Content="L&amp;R Website" FontSize="14"
-                            Click="openl_rwebpage"/>
+                            Click="openl_rwebpage"/>           
                     <Button Content="L&amp;R Internal" FontSize="14"
                             Click="openl_rstartpage"/>
                     <Button Content="Linked In" FontSize="14"

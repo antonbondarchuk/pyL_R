@@ -20,8 +20,6 @@ selected_switch = \
 forms.CommandSwitchWindow.show(options,
                         message='Isolate only elements of Structural Material:')
 
-
-
 try:
     strMatType = 'StructuralMaterialType.' + selected_switch
     matfilter = StructuralMaterialTypeFilter(eval(strMatType))

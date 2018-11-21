@@ -1,11 +1,11 @@
-"""Opens selected CAD link instance in AutoCAD 2018.
+"""Opens selected CAD link instance with system default AutoCAD version.
 Processes only single CAD file link at a time.
 """
+
 import os
 from Autodesk.Revit.DB import ExternalFileUtils, ModelPathUtils
 from pyrevit import revit, forms
 
-# autoCADpath = 'C:\\Program Files\\Autodesk\\AutoCAD 2018\\acad.exe'
 el = revit.get_selection().first
 
 if el != None and el.GetType().FullName == 'Autodesk.Revit.DB.ImportInstance':
@@ -18,4 +18,4 @@ else:
 try:
     os.startfile(fpath)
 except:
-    pass
+    forms.alert('Oops..Something went wrong.\nOpen CAD link manually')
