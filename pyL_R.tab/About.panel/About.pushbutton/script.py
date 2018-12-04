@@ -6,7 +6,7 @@ import sys
 from pyrevit import forms
 from pyrevit import script
 
-
+__title__='_____'
 __context__ = 'zerodoc'
 
 __doc__ = 'pyL_R information. Links to github repo, L&R websites ' \
